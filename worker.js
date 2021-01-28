@@ -41,5 +41,5 @@ userQueue.process(async (job) => {
   const userDocument = await DBClient.db.collection('users').findOne({ _id: ObjectId(userId) });
   if (!userDocument) throw Error('User not found');
 
-  console.log(`Welcome ${userDocument.email}`)
+  console.log(`Welcome ${userDocument.email}`);
 });
